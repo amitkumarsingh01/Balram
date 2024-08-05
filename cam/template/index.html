@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-CAM Control</title>
+    <script>
+        function toggleLed() {
+            fetch('/toggle_led', { method: 'POST' });
+        }
+
+        function increaseBrightness() {
+            fetch('/increase_brightness', { method: 'POST' });
+        }
+
+        function decreaseBrightness() {
+            fetch('/decrease_brightness', { method: 'POST' });
+        }
+    </script>
+</head>
+<body>
+    <h1>ESP32-CAM Control</h1>
+    <label>LED Control:</label>
+    <button onclick="toggleLed()">Toggle LED</button><br><br>
+    <label>Brightness Control:</label><br>
+    <button onclick="increaseBrightness()">Increase Brightness</button><br>
+    <button onclick="decreaseBrightness()">Decrease Brightness</button><br>
+</body>
+</html>
